@@ -1,4 +1,4 @@
-option(USE_SYSTEM_INDIGO "Use system Indigo libs or download prebuilt from the server" OFF)
+option(USE_SYSTEM_INDIGO "Use system Indigo libs or download prebuilt from the server" ON)
 
 
 if(NOT USE_SYSTEM_INDIGO)
@@ -37,5 +37,8 @@ if(NOT USE_SYSTEM_INDIGO)
 	# To avoid problem with library order we specify them twice or even more
 	set(Indigo_LIBRARIES ${Indigo_LIBRARIES} ${Indigo_LIBRARIES} ${Indigo_LIBRARIES})
 else()
-	message(FATAL_ERROR "Not implemented yet!")
+	# find_package(Indigo REQUIRED)
+	set(INDIGO_INCLUDE_DIR /usr/include)
+	set(Indigo_LIBRARIES -lindigo -lindigo-renderer)
+#	message(FATAL_ERROR "Not implemented yet!")
 endif()

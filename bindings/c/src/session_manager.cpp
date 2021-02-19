@@ -23,6 +23,7 @@ boost::mutex SessionManager::_mutex;
 boost::thread_specific_ptr<qword> SessionManager::_curSID;
 SessionManager SessionManager::_instance;
 
+typedef boost::lock_guard<boost::mutex> lock_guard;
 
 SessionManager::SessionManager()
 {

@@ -1,4 +1,4 @@
-option(USE_SYSTEM_BOOST "Use system Boost libs or download prebuilt from the server" OFF)
+option(USE_SYSTEM_BOOST "Use system Boost libs or download prebuilt from the server" ON)
 
 #Common settings
 #set(Boost_DEBUG ON)

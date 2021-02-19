@@ -1,4 +1,4 @@
-option(USE_SYSTEM_OPENCV "Use system OpenCV libs or download prebuilt from the server" OFF)
+option(USE_SYSTEM_OPENCV "Use system OpenCV libs or download prebuilt from the server" ON)
 
 if(NOT USE_SYSTEM_OPENCV)
 	set(OpenCV_DIR "${THIRD_PARTY_DIR}/opencv/${SYSTEM_NAME}/${SUBSYSTEM_NAME}")
@@ -23,5 +23,5 @@ if(NOT USE_SYSTEM_OPENCV)
 	include_directories(${OpenCV_INCLUDE_DIRS})
 else()
 	#find_package
-	message(FATAL_ERROR "Not implemented yet!")
+	find_package(OpenCV REQUIRED)
 endif()

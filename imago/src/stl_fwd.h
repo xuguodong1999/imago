@@ -18,12 +18,12 @@
 
 #include "comdef.h"
 #include "vec2d.h"
-
+#include <list>
 namespace std
 {
    template<typename E> class allocator;
    template<typename E, typename A> class vector;
-   template<typename E, typename A> class list;
+//   template<typename E, typename A> class list;
    template<typename E, typename A> class deque;
    template<typename T1, typename T2> struct pair;
 }

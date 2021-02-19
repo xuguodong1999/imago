@@ -46,7 +46,6 @@ namespace imago
       static boost::thread_specific_ptr<qword> _curSID;
       static SessionManager _instance;
       static boost::mutex _mutex;
-      typedef boost::lock_guard<boost::mutex> lock_guard;
 
       SessionManager();
       SessionManager( const SessionManager& );
